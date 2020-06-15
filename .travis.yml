@@ -1,7 +1,8 @@
-sudo: required
-services:
-  - docker
+sudo: false
 
-before_install:
-  - docker build -t irfansyed11/nodejsapp .
+language: node_js
 
+node_js:
+    - node
+script:
+    - npm run lint
